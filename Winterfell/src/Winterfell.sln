@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winterfell.Core", "Winterfell.Core\Winterfell.Core.csproj", "{5CF30F11-C5CA-4803-9F70-C58D2368D858}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winterfell.Web", "Winterfell.Web\Winterfell.Web.csproj", "{748C0CFB-97A7-4ECF-8470-65D473649C91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winterfell.Tests", "Winterfell.Tests\Winterfell.Tests.csproj", "{C0F83A0E-69AF-4C0F-BC98-2CD33A926A66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CF30F11-C5CA-4803-9F70-C58D2368D858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF30F11-C5CA-4803-9F70-C58D2368D858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF30F11-C5CA-4803-9F70-C58D2368D858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF30F11-C5CA-4803-9F70-C58D2368D858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{748C0CFB-97A7-4ECF-8470-65D473649C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748C0CFB-97A7-4ECF-8470-65D473649C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748C0CFB-97A7-4ECF-8470-65D473649C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748C0CFB-97A7-4ECF-8470-65D473649C91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F83A0E-69AF-4C0F-BC98-2CD33A926A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F83A0E-69AF-4C0F-BC98-2CD33A926A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F83A0E-69AF-4C0F-BC98-2CD33A926A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F83A0E-69AF-4C0F-BC98-2CD33A926A66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro de Cliente";
+}
+
+<div ng-app="winterfell" ng-controller="ClienteController">
+    <br/>
+    <div class="panel panel-default">
+       
+        <div class="panel-heading">
+            <h4 class="modal-title"> Cadastro de Cliente </h4>
+        </div>
+        
+        <div class="panel-body">
+            <form name="MeuForm">
+                <div class="row">
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                        <label> Nome </label>
+                        <input type="text" class="form-control" name="Nome" ng-model="viewdata.cliente.Nome"/>
+                    </div>
+
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                        <label> Email </label>
+                        <input type="text" class="form-control" name="Email" ng-model="viewdata.cliente.Email"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                        <label> CPF </label>
+                        <input type="text" class="form-control cpf" name="CPF" ng-model="viewdata.cliente.CPF" ng-required="true" ng-minlength="14"/>
+                    </div>
+
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                        <label> Nascimento </label>
+                        <input type="text" class="form-control data-br" name="Nascimento" ng-model="viewdata.cliente.Nascimento"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-4 col-lg-6"></div>
+
+                    <div class="form-group col-md-4 col-lg-3">
+                        <button type="button" class="btn btn-default form-control"> Novo </button>
+                    </div>
+
+                    <div class="form-group col-md-4 col-lg-3">
+                        <button type="submit" class="btn btn-primary form-control" ng-disabled="MeuForm.$invalid" ng-click="salvar()"> Salvar </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <hr/>
+
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <h4 class="modal-title"> Lista de Clientes </h4>
+        </div>
+
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th> Id </th>
+                        <th> Nome </th>
+                        <th> CPF </th>
+                        <th> Nascimento </th>
+                        <th> Email </th>
+                        <th>  </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat="item in viewdata.clientes">
+
+                        <td> {{ item.Id }} </td>
+                        <td> {{ item.Nome }} </td>
+                        <td> {{ item.CPF }} </td>
+                        <td> {{ item.Nascimento | dateFilter| date:"dd/MM/yyyy" }} </td>
+                        <td> {{ item.Email }} </td>
+
+                        <td>
+                            <button type="button" class="btn btn-primary" ng-click="editar(item)">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </button>
+
+                            <button type="button" class="btn btn-danger" ng-click="excluir(item)">
+                                <span class="glyphicon glyphicon-remove"></span> Excluir
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/cliente")
+}
+
