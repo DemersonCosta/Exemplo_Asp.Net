@@ -17,7 +17,7 @@ namespace Winterfell.Web.App_Data
 
         public void Start()
         {
-            new SchemaExport(_kernel.Resolve<Configuration>()).Create(true, false);
+            new SchemaExport(_kernel.Resolve<Configuration>()).Create(true, true);
         }
 
         public void Stop()

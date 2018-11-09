@@ -15,7 +15,7 @@ namespace Winterfell.Tests.Core
             Container = new DefaultContainer();
             Container.SetupForTests();
 
-            new SchemaExport(Container.Resolve<Configuration>()).Create(true, true);
+            new SchemaExport(Container.Resolve<Configuration>()).Create(true, false);
         }
     }
 }

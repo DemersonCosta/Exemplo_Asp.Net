@@ -11,8 +11,7 @@ namespace Winterfell.Core.Modulos.EnderecoModulo.Map
 
             Id(x => x.Id, m =>
             {
-                m.Generator(Generators.Identity);
-                m.Column("IdEndereco");
+                m.Generator(Generators.Identity);               
             });
 
             Property(x => x.Cidade, c => c.Column("Cidade"));

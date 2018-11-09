@@ -85,9 +85,19 @@ namespace Winterfell.Web
 
             #endregion
 
-            #region Modulo Empresa
-            bundles.Add(new ScriptBundle("~/bundles/empresa").Include(
-                "~/Scripts/app/empresa/empresaController.js"));
+            #region Modulo Usuario
+            bundles.Add(new ScriptBundle("~/bundles/usuario").Include(
+                "~/Areas/Admin/Scripts/app/usuario/usuarioController.js"               
+                ));
+
+
+            #endregion
+
+            #region Modulo Administrativo
+            bundles.Add(new ScriptBundle("~/bundles/administrativo").Include(               
+                "~/Areas/Admin/Scripts/app/administrativo/administrativoController.js"
+                ));
+
 
             #endregion
         }

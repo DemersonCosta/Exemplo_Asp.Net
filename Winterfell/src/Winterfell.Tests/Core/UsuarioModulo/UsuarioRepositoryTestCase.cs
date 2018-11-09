@@ -15,33 +15,33 @@ namespace Winterfell.Tests.Core.UsuarioModulo
         [TestMethod]
         public void should_Add_Usuario()
         {                       
-            var usuario = new Usuario
+            
+            var usuario2 = new Usuario
             {
-                Nome = "Demerson",
+                Nome = "Alan",
                 CPF = "11111111111",
                 Email = "Demerson@teste.mp.br",
+                Telefone = "51515155",
                 DataCadastro = DateTime.Now,
                 Login = "Dcosta",
                 Senha = "123456",
                 Endereco = new List<Endereco>() { new Endereco() {
                     Cep = "teste",
                     Cidade = "atyfsya",
-                    Complemento = "s,doid",
-                    Num = ",msind",
+                    Bairro = "audgbausd",
+                    Complemento = "sdoid",
+                    Num = "msind",
                     Rua = "sdmid"
                     }
-                }          
+                }
 
             };
 
-
             var target = Container.Resolve<IUsuarioRepository>();
 
-            target.AddOrUpdate(usuario);
+            target.AddOrUpdate(usuario2);
 
-            Assert.IsTrue(usuario.Id > 0);
-
+            Assert.IsTrue(usuario2.Id > 0);
         }
-
     }
 }

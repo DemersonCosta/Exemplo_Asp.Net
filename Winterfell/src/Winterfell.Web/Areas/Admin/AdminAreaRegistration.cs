@@ -17,7 +17,8 @@ namespace Winterfell.Web.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new {Controller = "Administrativo", action = "Index", id = UrlParameter.Optional },
+                new []{ "Winterfell.Web.Areas.Admin.Controllers" }
             );
         }
     }

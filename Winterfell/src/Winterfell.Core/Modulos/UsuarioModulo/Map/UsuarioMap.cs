@@ -17,8 +17,7 @@ namespace Winterfell.Core.Modulos.UsuarioModulo.Map
 
             Id(x => x.Id, m =>
             {
-                m.Generator(Generators.Identity);
-                m.Column("IdUsuario");
+                m.Generator(Generators.Identity);               
             });
 
             Property(x => x.Nome, c => c.Column("Nome"));
@@ -46,7 +45,7 @@ namespace Winterfell.Core.Modulos.UsuarioModulo.Map
                     map.Cascade(Cascade.All);
                     //map.Inverse(true);
                     map.Key(k => k.Column("IdUsuario"));
-                    map.OrderBy("NuOrdem");
+                   
                 },
                 r => r.OneToMany()
             );
