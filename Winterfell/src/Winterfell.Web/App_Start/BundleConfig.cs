@@ -23,14 +23,36 @@ namespace Winterfell.Web
                 "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                "~/Scripts/bootstrap/bootstrap.js",
-                "~/Scripts/bootstrap/respond.js"));
+                 "~/Scripts/bootstrap/bootstrap.js",
+                 "~/Scripts/bootstrap/respond.js",
+                 "~/Content/bootstrap-grid.css",
+                 "~/Content/bootstrap-grid.min.css"
+                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Scripts/plugins/angular-toastr/angular-toastr.css",
                 "~/Content/ladda-themeless.min.css",
                 "~/Content/bootstrap.css",
-                "~/Content/site.css"));
+                "~/Content/bootstrap.min.css",
+                "~/Content/site.css",
+                "~/Content/shop-homepage.css"
+                ));
+
+            bundles.Add(new StyleBundle("~/Content/AdminCss").Include(
+                 "~/Content/Admin/bootstrap/css/bootstrap.min.css",
+                "~/Content/Admin/font-awesome/css/font-awesome.min.css",
+                 "~/Content/Admin/css/local.css"
+                //"~/Content/Admin/font-awesome/css/font-awesome.css",            
+                //"~/Content/Admin/bootstrap/css/bootstrap.css"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/administrativo").Include(
+                "~/Scripts/bootstrap/js/bootstrap.min.js",
+                //"~/Scripts/bootstrap/js/bootstrap.js",
+                "~/Scripts/jquery/js/jquery-1.10.2.min.js"
+
+               ));
+
 
             CustomBundles(bundles);
 
@@ -44,14 +66,14 @@ namespace Winterfell.Web
             #region AngularJS
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                "~/Scripts/angular/angular.min.js",
-                "~/Scripts/plugins/datetime.js",
-                "~/Scripts/plugins/bootbox.min.js",
-                "~/Scripts/plugins/angular-validate.min.js",
-                "~/Scripts/plugins/angular-ladda.min.js",
-                "~/Scripts/plugins/angular-animate.min.js",
-                "~/Scripts/plugins/angular-toastr/angular-toastr.min.js",
-                "~/Scripts/plugins/angular-toastr/angular-toastr.tpls.min.js"));
+               "~/Scripts/angular/angular.min.js",
+               "~/Scripts/plugins/datetime.js",
+               "~/Scripts/plugins/bootbox.min.js",
+               "~/Scripts/plugins/angular-validate.min.js",
+               "~/Scripts/plugins/angular-ladda.min.js",
+               "~/Scripts/plugins/angular-animate.min.js",
+               "~/Scripts/plugins/angular-toastr/angular-toastr.min.js",
+               "~/Scripts/plugins/angular-toastr/angular-toastr.tpls.min.js"));
 
             #endregion
 
@@ -89,7 +111,6 @@ namespace Winterfell.Web
             bundles.Add(new ScriptBundle("~/bundles/usuario").Include(
                 "~/Areas/Admin/Scripts/app/usuario/usuarioController.js"               
                 ));
-
 
             #endregion
 
