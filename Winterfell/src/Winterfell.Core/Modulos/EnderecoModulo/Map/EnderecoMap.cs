@@ -1,5 +1,6 @@
 ﻿using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
+using Winterfell.Core.Modulos.UsuarioModulo;
 
 namespace Winterfell.Core.Modulos.EnderecoModulo.Map
 {
@@ -26,13 +27,7 @@ namespace Winterfell.Core.Modulos.EnderecoModulo.Map
 
             Property(x => x.Complemento, c => c.Column("Complemento"));
 
-
-            ManyToOne(x => x.Usuario, m =>
-            {
-                m.Lazy(LazyRelation.Proxy);
-                m.Column("IdUsuario");
-            });
-
+            OneToOne(x => x.Usuario, m => m.PropertyReference(typeof(Usuario).GetProperty("Endereco")));
 
         }
     }

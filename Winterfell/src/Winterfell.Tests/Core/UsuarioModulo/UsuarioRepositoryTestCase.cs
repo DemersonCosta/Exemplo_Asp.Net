@@ -12,11 +12,13 @@ namespace Winterfell.Tests.Core.UsuarioModulo
     public class UsuarioRepositoryTestCase : BaseRepositoryTestCase
     {
 
+       
+
         [TestMethod]
         public void should_Add_Usuario()
         {                       
             
-            var usuario2 = new Usuario
+            var usuario = new Usuario
             {
                 Nome = "Alan",
                 CPF = "11111111111",
@@ -25,23 +27,24 @@ namespace Winterfell.Tests.Core.UsuarioModulo
                 DataCadastro = DateTime.Now,
                 Login = "Dcosta",
                 Senha = "123456",
-                Endereco = new List<Endereco>() { new Endereco() {
+                Endereco = new Endereco()
+                {
                     Cep = "teste",
                     Cidade = "atyfsya",
                     Bairro = "audgbausd",
                     Complemento = "sdoid",
                     Num = "msind",
                     Rua = "sdmid"
-                    }
                 }
+
 
             };
 
             var target = Container.Resolve<IUsuarioRepository>();
 
-            target.AddOrUpdate(usuario2);
+            target.AddOrUpdate(usuario);
 
-            Assert.IsTrue(usuario2.Id > 0);
+            Assert.IsTrue(usuario.Id > 0);
         }
     }
 }

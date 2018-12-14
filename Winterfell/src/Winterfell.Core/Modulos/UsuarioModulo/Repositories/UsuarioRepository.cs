@@ -1,5 +1,9 @@
 ﻿using NHibernate;
+using NHibernate.Criterion;
+using NHibernate.Transform;
+using System.Collections.Generic;
 using Winterfell.Core.Domain.Repositories;
+using Winterfell.Core.Modulos.EnderecoModulo;
 
 namespace Winterfell.Core.Modulos.UsuarioModulo.Repositories
 {
@@ -13,5 +17,7 @@ namespace Winterfell.Core.Modulos.UsuarioModulo.Repositories
         {
 
         }
+
+        
     }
 }

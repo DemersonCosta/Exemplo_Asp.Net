@@ -6,7 +6,9 @@ using Winterfell.Core.Modulos.EnderecoModulo;
 namespace Winterfell.Core.Modulos.UsuarioModulo
 {
     public class Usuario: IIdentifiable
-    {       
+    {
+
+       
         public virtual long Id { get; set; }
 
         public virtual string Nome { get; set; }
@@ -23,6 +25,6 @@ namespace Winterfell.Core.Modulos.UsuarioModulo
 
         public virtual DateTime DataCadastro { get; set; }        
 
-        public virtual IList<Endereco> Endereco { get; set; }
+        public virtual Endereco Endereco { get; set; }
     }
 }

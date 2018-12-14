@@ -190,18 +190,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Admin\bootstrap\css\bootstrap.css" />
-    <Content Include="Content\Admin\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Scripts\bootstrap\js\bootstrap.js" />
-    <Content Include="Scripts\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\Admin\css\local.css" />
     <Content Include="Content\Admin\font-awesome\css\font-awesome.css" />
     <Content Include="Content\Admin\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\Admin\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="Scripts\jquery\js\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\app\administrativo\administrativoController.js" />
-    <Content Include="Scripts\app\usuario\usuarioController.js" />
-    <Content Include="Content\admin.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -212,7 +204,6 @@
     <Content Include="Content\shop-homepage.css" />
     <Content Include="Content\simple-sidebar.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\angular\angular.min.js.map" />
@@ -222,32 +213,32 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Usuario\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Administrativo\Index.cshtml" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\Admin\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\Admin\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\Admin\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\Admin\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\Admin\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\Views\Usuario\Form_.cshtml" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="Scripts\app\cliente\clienteController.js" />
     <Content Include="Scripts\angular\angular-mocks.js" />
     <Content Include="Scripts\angular\angular.js" />
     <Content Include="Scripts\angular\angular.min.js" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\filters.js" />
     <Content Include="Scripts\app\infra\jquery.config.js" />
-    <Content Include="Scripts\bootstrap\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap\bootstrap.bundle.min.js" />
+    <None Include="Scripts\jquery\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\app\usuario\usuarioCtrl.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\respond.js" />
     <Content Include="Scripts\bootstrap\respond.min.js" />
-    <Content Include="Scripts\bootstrap\bootstrap.bundle.js.map" />
-    <Content Include="Scripts\bootstrap\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap\bootstrap.min.js.map" />
-    <None Include="Scripts\jquery\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery.mask.js" />
-    <Content Include="Scripts\jquery\Admin.js" />
-    <Content Include="Scripts\jquery\jquery.js" />
     <Content Include="Scripts\jquery\jquery.mask.min.js" />
     <Content Include="Scripts\jquery\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery\jquery-3.3.1.min.js" />
@@ -255,12 +246,7 @@
     <Content Include="Scripts\jquery\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery\jquery-3.3.1.min.map" />
-    <Content Include="Scripts\jquery\jquery.min.map" />
-    <Content Include="Scripts\jquery\jquery.slim.min.map" />
     <None Include="Scripts\jquery\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery\jquery.min.js" />
-    <Content Include="Scripts\jquery\jquery.slim.js" />
-    <Content Include="Scripts\jquery\jquery.slim.min.js" />
     <Content Include="Scripts\jquery\jquery.validate.js" />
     <Content Include="Scripts\jquery\jquery.validate.min.js" />
     <Content Include="Scripts\jquery\jquery.validate.unobtrusive.js" />
@@ -383,7 +369,7 @@
     <Content Include="Scripts\plugins\dataTables\Scroller-1.4.2\js\dataTables.scroller.js" />
     <Content Include="Scripts\plugins\dataTables\Scroller-1.4.2\js\dataTables.scroller.min.js" />
     <Content Include="Scripts\plugins\datetime.js" />
-    <Content Include="Scripts\_references.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -406,9 +392,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>

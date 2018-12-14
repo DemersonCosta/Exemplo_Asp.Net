@@ -1,0 +1,88 @@
+﻿
+<div class="panel panel-default panel-table">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col col-xs-6">
+                <h3 class="panel-title">Adicionar Usuario</h3>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+
+        <form name="formUsuario" ng-validate="{}">
+            <div class="row">
+                <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                    <label> Nome </label>
+                    <input type="text" class="form-control"  style="color: black;" name="Nome" ng-model="viewdata.usuario.Nome" />
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                    <label> E-mail </label>
+                    <input type="text" class="form-control"  style="color: black;" name="Email" ng-model="viewdata.usuario.Email" />
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                    <label> CPF </label>
+                    <input type="text" class="form-control cpf" style="color: black;" name="CPF" ng-model="viewdata.usuario.CPF" ng-required="true" ng-minlength="14" />
+                </div>
+
+                <div class="form-group col-sm-3 col-md-3 col-lg-3">
+                    <label> Telefone </label>
+                    <input type="text" class="form-control celular" style="color: black;" name="Telefone" ng-model="viewdata.usuario.Telefone" />
+                </div>
+                <div class="form-group date col-sm-3 col-md-3 col-lg-3">
+                    <label> Data do Cadastro </label>
+                    <input type="text" class="form-control " placeholder="" id="DataCadastro" style="color:black; background-color:aliceblue" name="DataCadastro" ng-model="viewdata.usuario.DataCadastro" />
+                    @*@DateTime.Now.ToString("dd-MM-yyyy")*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-3 col-md-3 col-lg-3">
+                    <label> Cidade </label>
+                    <input type="text" class="form-control"  style="color: black;" name="Cidade" ng-model="viewdata.usuario.Endereco.Cidade" />
+                </div>
+                <div class="form-group col-sm-3 col-md-3 col-lg-3">
+                    <label> Rua </label>
+                    <input type="text" class="form-control"  style="color: black;" name="Rua" ng-model="viewdata.usuario.Endereco.Rua" />
+                </div>
+                <div class="form-group col-sm-1 col-md-1 col-lg-1">
+                    <label> N° </label>
+                    <input type="text" class="form-control" style="color: black;" name="Num" ng-model="viewdata.usuario.Endereco.Num" />
+                </div>
+                <div class="form-group col-sm-2 col-md-2 col-lg-2">
+                    <label> Cep </label>
+                    <input type="text" class="form-control cep"  style="color: black;" name="Cep" ng-model="viewdata.usuario.Endereco.Cep" />
+                </div>
+                <div class="form-group col-sm-3 col-md-3 col-lg-3">
+                    <label> Bairro </label>
+                    <input type="text" class="form-control"  style="color: black;" name="Bairro" ng-model="viewdata.usuario.Endereco.Bairro" />
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                    <label> Complemento </label>
+                    <input type="text" class="form-control"  style="color: black;" name="Complemento" ng-model="viewdata.usuario.Endereco.Complemento" />
+                </div>
+                <div class="form-group col-sm-3 col-md-3 col-lg-3">
+                    <label> Login </label>
+                    <input type="text" class="form-control" style="color: black;" name="Login" ng-model="viewdata.usuario.Login" />
+                </div>
+
+                <div class="form-group col-sm-3 col-md-3 col-lg-3">
+                    <label> Senha </label>
+                    <input type="text" class="form-control"  style="color: black;" name="Senha" ng-model="viewdata.usuario.Senha" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-4 col-lg-6"></div>
+
+                <div class="form-group col-md-4 col-lg-3">
+                    <button type="button" class="btn btn-default form-control"> Novo </button>
+                </div>
+
+                <div class="form-group col-md-4 col-lg-3">
+                    <button type="submit" class="btn btn-primary form-control" ng-click="validaForm(formUsuario) && salvar(viewdata.usuario)"> Salvar </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+

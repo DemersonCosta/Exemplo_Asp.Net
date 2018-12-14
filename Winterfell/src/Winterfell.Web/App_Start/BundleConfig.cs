@@ -7,10 +7,12 @@ namespace Winterfell.Web
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+          
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                "~/Scripts/jquery/jquery-{version}.js",
+                 "~/Scripts/jquery/jquery-{version}.js",
                 "~/Scripts/jquery/spin.js",
-                "~/Scripts/jquery/ladda.js"));
+                "~/Scripts/jquery/ladda.js"
+                ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                 "~/Scripts/jquery/jquery.validate*",
@@ -24,16 +26,18 @@ namespace Winterfell.Web
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                  "~/Scripts/bootstrap/bootstrap.js",
-                 "~/Scripts/bootstrap/respond.js",
-                 "~/Content/bootstrap-grid.css",
-                 "~/Content/bootstrap-grid.min.css"
+                 "~/Scripts/bootstrap/respond.js"
+                 //"~/Content/bootstrap-grid.css",
+                 //"~/Content/bootstrap-grid.min.css"
+
+
                  ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Scripts/plugins/angular-toastr/angular-toastr.css",
                 "~/Content/ladda-themeless.min.css",
                 "~/Content/bootstrap.css",
-                "~/Content/bootstrap.min.css",
+                "~/Content/bootstrap.min.css",              
                 "~/Content/site.css",
                 "~/Content/shop-homepage.css"
                 ));
@@ -46,12 +50,7 @@ namespace Winterfell.Web
                 //"~/Content/Admin/bootstrap/css/bootstrap.css"
                 ));
 
-            bundles.Add(new ScriptBundle("~/bundles/administrativo").Include(
-                "~/Scripts/bootstrap/js/bootstrap.min.js",
-                //"~/Scripts/bootstrap/js/bootstrap.js",
-                "~/Scripts/jquery/js/jquery-1.10.2.min.js"
-
-               ));
+           
 
 
             CustomBundles(bundles);
@@ -73,7 +72,11 @@ namespace Winterfell.Web
                "~/Scripts/plugins/angular-ladda.min.js",
                "~/Scripts/plugins/angular-animate.min.js",
                "~/Scripts/plugins/angular-toastr/angular-toastr.min.js",
-               "~/Scripts/plugins/angular-toastr/angular-toastr.tpls.min.js"));
+               "~/Scripts/plugins/angular-toastr/angular-toastr.tpls.min.js",
+               "~/Scripts/app/app.js",                
+               "~/Scripts/app/filters.js"
+
+               ));
 
             #endregion
 
@@ -108,19 +111,19 @@ namespace Winterfell.Web
             #endregion
 
             #region Modulo Usuario
-            bundles.Add(new ScriptBundle("~/bundles/usuario").Include(
-                "~/Areas/Admin/Scripts/app/usuario/usuarioController.js"               
+            bundles.Add(new ScriptBundle("~/bundles/usuarioAngular").Include(
+                "~/Scripts/app/usuario/usuarioCtrl.js"
                 ));
 
             #endregion
 
-            #region Modulo Administrativo
-            bundles.Add(new ScriptBundle("~/bundles/administrativo").Include(               
-                "~/Areas/Admin/Scripts/app/administrativo/administrativoController.js"
-                ));
+            //#region Modulo Administrativo
+            //bundles.Add(new ScriptBundle("~/bundles/administrativo").Include(               
+            //    "~/Scripts/app/administrativo/administrativoController.js"
+            //    ));
 
 
-            #endregion
+            //#endregion
         }
     }
 }

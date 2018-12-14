@@ -17,7 +17,7 @@ namespace Winterfell.Core.Modulos.UsuarioModulo.Map
 
             Id(x => x.Id, m =>
             {
-                m.Generator(Generators.Identity);               
+                m.Generator(Generators.Identity);
             });
 
             Property(x => x.Nome, c => c.Column("Nome"));
@@ -32,24 +32,14 @@ namespace Winterfell.Core.Modulos.UsuarioModulo.Map
 
             Property(x => x.Senha, c => c.Column("Senha"));
 
-            Property(x => x.DataCadastro, c => c.Column("DataCadastro"));
-
-
-            Bag(
-                x => x.Endereco,
-                map =>
-                {
-                    map.Table("Endereco");
-                    map.Fetch(CollectionFetchMode.Select);
-                    //map.Lazy(CollectionLazy.Lazy);
-                    map.Cascade(Cascade.All);
-                    //map.Inverse(true);
-                    map.Key(k => k.Column("IdUsuario"));
-                   
-                },
-                r => r.OneToMany()
-            );
-
+            Property(x => x.DataCadastro, c => c.Column("DataCadastro"));            
+            
+            ManyToOne(x => x.Endereco, m =>
+            {
+                m.Cascade(Cascade.All);
+                m.Column("IdEndereco");
+            });
+            
 
         }
     }

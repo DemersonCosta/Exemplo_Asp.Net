@@ -1,4 +1,5 @@
-﻿using Winterfell.Core.Domain.Model;
+﻿using System.Web.Script.Serialization;
+using Winterfell.Core.Domain.Model;
 using Winterfell.Core.Modulos.UsuarioModulo;
 
 namespace Winterfell.Core.Modulos.EnderecoModulo
@@ -19,6 +20,8 @@ namespace Winterfell.Core.Modulos.EnderecoModulo
 
         public virtual string Complemento { get; set; }
 
+        [ScriptIgnore]
         public virtual Usuario Usuario { get; set; }
+
     }
 }
