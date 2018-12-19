@@ -6,8 +6,10 @@
 
      function usuarioCtrl($scope, $http, $filter) {
 
-        $scope.viewdata = {};
-
+         $scope.viewdata = {};
+         dataAtual();
+         var form = document.forms.formUsuario; 
+         
         $scope.validaForm = function (form) {
             if (form.validate()) {
                 return true;
@@ -20,16 +22,39 @@
         $scope.setup = function () {
 
             $scope.viewdata.usuario = {};
-
+           
             $http({ method: "POST", url: "Usuario/GetViewData" })
                 .then(function success(response) {
                     $scope.viewdata.list = response.data;
 
             });
-        }
-        /********************* F U N Ç Õ E S **************************/
+         }    
+         //## LIMPAR FORMULARIO##
+         $scope.limparFormulario = function () {
+             $scope.viewdata.usuario = {};
+             dataAtual();     
+         }  
+         
+         // ####### DATA ####### 
+               
+         function dataAtual() {
+             $(document).ready(function () {
+                 var now = new Date();
+                 var month = (now.getMonth() + 1);
+                 var day = now.getDate();
+                 if (month < 10)
+                     month = "0" + month;
+                 if (day < 10)
+                     day = "0" + day;
+                 var today = day + '/' + month + '/' + now.getFullYear();
+                 $('#datePicker').val(today);
+             });
+         }                  
+         //######################
 
-      
+        /********************* F U N Ç Õ E S   C R U D **************************/
+
+        
         // S A L V A R
         $scope.salvar = function (item) {           
 
@@ -38,7 +63,8 @@
                 url: "/Usuario/Salvar",
                 data: item
             }).
-            then(function successCallback(response) {
+                then(function successCallback(response) {
+                $scope.limparFormulario();
                 $scope.setup();
             },
             function errorCallback(response) {
@@ -66,7 +92,7 @@
 
                             then(function successCallback(response) {
                                 $scope.viewdata.usuario = {};
-                                $scope.getViewData();
+                                $scope.setup();
                             },
 
                             function errorCallback(response) {

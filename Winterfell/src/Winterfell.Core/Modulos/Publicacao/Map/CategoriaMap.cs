@@ -21,12 +21,21 @@ namespace Winterfell.Core.Modulos.Publicacao.Map
 
             Property(x => x.NomeCategoria, m => m.Column("NomeCategoria"));
 
-            ManyToOne(x => x.Postagem, m =>
-            {
-                m.Lazy(LazyRelation.Proxy);
-                m.Column("IdPostagem");
-            });
+            Bag(
+               x => x.Postagem,
+               map =>
+               {
+                   map.Table("Postagem");
+                   map.Fetch(CollectionFetchMode.Select);
+                    //map.Lazy(CollectionLazy.Lazy);
+                    map.Cascade(Cascade.All);
+                    //map.Inverse(true);
+                    map.Key(k => k.Column("IdPostagem"));
 
+               },
+               r => r.OneToMany()
+           );
+            
         }
         
     }

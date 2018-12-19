@@ -16,7 +16,7 @@ namespace Winterfell.Web
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                 "~/Scripts/jquery/jquery.validate*",
-                "~/Scripts/jquery/jquery.mask.min.js",
+                "~/Scripts/jquery.mask.js",
                 "~/Scripts/app/infra/jquery.config.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
@@ -87,7 +87,9 @@ namespace Winterfell.Web
                 "~/Scripts/plugins/dataTables/datatables.min.js",
                 "~/Scripts/plugins/dataTables/angular-datatables.min.js",
                 "~/Scripts/plugins/dataTables/buttons/angular-datatables.buttons.min.js",
-                "~/Scripts/plugins/dataTables/angular-datatables.bootstrap.min.js"));
+                "~/Scripts/plugins/dataTables/angular-datatables.bootstrap.min.js",
+                "~/Scripts/plugins/summernote/summernote.min.js"
+                ));
 
             // dataTables css styles
             bundles.Add(new StyleBundle("~/Content/plugins/dataTables/dataTablesStyles").Include(

@@ -36,7 +36,7 @@ namespace Winterfell.Web.Areas.Admin.Controllers
         {
             try
             {
-                if (usuario.Id <= 0)
+                if (usuario.Id <= 0 && usuario.DataCadastro != DateTime.Now)
                 {
                     usuario.DataCadastro = DateTime.Now;
                 }

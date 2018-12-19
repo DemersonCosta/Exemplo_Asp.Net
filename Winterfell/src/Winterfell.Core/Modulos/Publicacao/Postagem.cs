@@ -8,11 +8,9 @@ namespace Winterfell.Core.Modulos.Publicacao
     public class Postagem : IIdentifiable
     {
 
-        public virtual long Id { get; set; }
+        public virtual long Id { get; set; }       
 
-        public virtual string Usuario { get; set; }
-
-        public virtual DateTime Publicacao { get; set; }
+        public virtual DateTime DataPost { get; set; }
 
         public virtual string Titulo { get; set; }
 
@@ -38,7 +36,7 @@ namespace Winterfell.Core.Modulos.Publicacao
 
         public virtual string ImagemMimeType { get; set; }
 
-        public virtual IList<Categoria> Categoria { get; set; }
+        public virtual Categoria Categoria { get; set; }
 
 
     }

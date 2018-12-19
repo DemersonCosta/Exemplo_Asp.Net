@@ -17,11 +17,9 @@ namespace Winterfell.Core.Modulos.Publicacao.Map
             Id(x => x.Id, m =>
             {
                 m.Generator(Generators.Identity);               
-            });
+            });           
 
-            Property(x => x.Usuario, m => m.Column("Usuario"));
-
-            Property(x => x.Publicacao, m => m.Column("Publicacao"));
+            Property(x => x.DataPost, m => m.Column("Publicacao"));
 
             Property(x => x.Titulo, m => m.Column("Titulo"));
 
@@ -33,20 +31,12 @@ namespace Winterfell.Core.Modulos.Publicacao.Map
 
             Property(x => x.Foto, m => m.Column("Foto"));
 
-            Bag(
-                x => x.Categoria,
-                map =>
-                {
-                    map.Table("Categoria");
-                    map.Fetch(CollectionFetchMode.Select);
-                    //map.Lazy(CollectionLazy.Lazy);
-                    map.Cascade(Cascade.All);
-                    //map.Inverse(true);
-                    map.Key(k => k.Column("IdPostagem"));
+            ManyToOne(x => x.Categoria, m =>
+            {
+                m.Cascade(Cascade.All);
+                m.Column("IdPostagem");
+            });
 
-                },
-                r => r.OneToMany()
-            );
         }
     }
 }

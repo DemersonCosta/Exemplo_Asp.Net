@@ -9,6 +9,6 @@ namespace Winterfell.Core.Modulos.Publicacao
 
         public virtual string NomeCategoria { get; set; }      
 
-        public virtual Postagem Postagem{ get; set; }
+        public virtual IList<Postagem> Postagem { get; set; }
     }
 }

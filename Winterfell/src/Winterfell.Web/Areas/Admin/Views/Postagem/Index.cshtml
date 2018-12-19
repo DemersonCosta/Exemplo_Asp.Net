@@ -1,0 +1,71 @@
+﻿@using System.Web.Optimization
+<br />
+
+<div ng-controller="noticiaCtrl" ng-init="setup()" class="ng-cloak">
+
+    <div class="container bg-azul">
+        <div class="row">
+            <div class="col-xs-10"><span class="fa fa-newspaper-o fa-fw"></span> Cadastro de Notícias</div>
+            <div class="col-xs-2 text-right">
+                <a href="#" class="button-tour" style="color: white; display: none"><span class="fa fa-question-circle"></span><span>&nbsp;Ajuda Interativa</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-white">
+        <br />
+        <div class="row">
+            <div class="col-lg-offset-10 col-lg-2">
+                <button class="form-control btn btn-success" ng-click="novaNoticia()">Nova</button>
+            </div>
+        </div>
+
+        <hr />
+
+        
+
+        <div>
+            <table datatable="ng" dt-options="view.dtOptions" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Ordem</th>
+                        <th>Publicação</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in viewdata.list track by $index">
+                        <td><a href="/Postagem/Visualizar/{{item.Id}}">{{item.Titulo}}</a></td>
+                        <td>{{item.Ordem}}</td>
+                        <td>{{item.DataPost | jsdate}}</td>
+                        <td>
+                            <div class="col-lg-6 col-xs-6">
+                                <button class="form-control btn btn-primary" ng-click="editar(item)">
+                                    Editar
+                                    <span class="fa fa-pencil-square-o"></span>
+                                </button>
+                            </div>
+                            <div class="col-lg-6 col-xs-6">
+                                <button class="form-control btn btn-danger ladda-button" ladda="view.loading" ng-click="inativar(item)">
+                                    Inativar
+                                    <span class="fa fa-ban"></span>
+                                </button>
+                            </div>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br />
+    </div>
+
+    @Html.Partial("_form")
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/PostagemCtrl")
+    @Scripts.Render("~/bundles/dataTables")
+}

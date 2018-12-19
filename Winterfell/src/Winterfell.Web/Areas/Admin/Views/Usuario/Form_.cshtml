@@ -9,7 +9,7 @@
     </div>
     <div class="panel-body">
 
-        <form name="formUsuario" ng-validate="{}">
+        <form id="formUsuario" name="formUsuario" ng-validate="{}">
             <div class="row">
                 <div class="form-group col-sm-6 col-md-6 col-lg-6">
                     <label> Nome </label>
@@ -28,16 +28,15 @@
                     <label> Telefone </label>
                     <input type="text" class="form-control celular" style="color: black;" name="Telefone" ng-model="viewdata.usuario.Telefone" />
                 </div>
-                <div class="form-group date col-sm-3 col-md-3 col-lg-3">
+                <div class="form-group  col-sm-3 col-md-3 col-lg-3">
                     <label> Data do Cadastro </label>
-                    <input type="text" class="form-control " placeholder="" id="DataCadastro" style="color:black; background-color:aliceblue" name="DataCadastro" ng-model="viewdata.usuario.DataCadastro" />
-                    @*@DateTime.Now.ToString("dd-MM-yyyy")*@
+                    <input type="text" class="form-control data-br" id="datePicker" style="color:black; background-color:aliceblue" name="DataCadastro" ng-model="viewdata.usuario.DataCadastro" />         
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-sm-3 col-md-3 col-lg-3">
                     <label> Cidade </label>
-                    <input type="text" class="form-control"  style="color: black;" name="Cidade" ng-model="viewdata.usuario.Endereco.Cidade" />
+                    <input type="text" class="form-control" style="color: black;" name="Cidade" ng-model="viewdata.usuario.Endereco.Cidade" />
                 </div>
                 <div class="form-group col-sm-3 col-md-3 col-lg-3">
                     <label> Rua </label>
@@ -74,7 +73,7 @@
                 <div class="form-group col-md-4 col-lg-6"></div>
 
                 <div class="form-group col-md-4 col-lg-3">
-                    <button type="button" class="btn btn-default form-control"> Novo </button>
+                    <button type="button" ng-click="limparFormulario()" class="btn btn-default form-control"> Novo </button>
                 </div>
 
                 <div class="form-group col-md-4 col-lg-3">
