@@ -21,18 +21,18 @@ namespace Winterfell.Core.Modulos.Publicacao
         [ScriptIgnore]
         public virtual byte[] Imagem { get; set; }
 
-        [ScriptIgnore]
-        public virtual string Foto
-        {
-            get
-            {
-                return (Imagem == null ? string.Empty : Convert.ToBase64String(Imagem));
-            }
-            set
-            {
-                this.Foto = value;
-            }
-        }
+        //[ScriptIgnore]
+        //public virtual string Foto
+        //{
+        //    get
+        //    {
+        //        return (Imagem == null ? string.Empty : Convert.ToBase64String(Imagem));
+        //    }
+        //    set
+        //    {
+        //        this.Foto = value;
+        //    }
+        //}
 
         public virtual string ImagemMimeType { get; set; }
 

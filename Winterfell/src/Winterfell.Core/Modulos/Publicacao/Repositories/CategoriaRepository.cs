@@ -8,12 +8,12 @@ using Winterfell.Core.Domain.Repositories;
 
 namespace Winterfell.Core.Modulos.Publicacao.Repositories
 {
-    public interface ICategoria : ICrudRepository<Categoria, long>
+    public interface ICategoriaRepository : ICrudRepository<Categoria, long>
     {
 
     }
 
-    public class CategoriaRepository : DefaultRepository<Categoria, long>,ICategoria
+    public class CategoriaRepository : DefaultRepository<Categoria, long>, ICategoriaRepository
     {
         public CategoriaRepository( ISession session) : base(session)
         {

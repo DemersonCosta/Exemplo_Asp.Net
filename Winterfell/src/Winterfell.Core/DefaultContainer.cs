@@ -87,7 +87,7 @@ namespace Winterfell.Core
                 x.Dialect<MsSql2012Dialect>();
                 x.ConnectionProvider<DriverConnectionProvider>();
                 x.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
-                x.ConnectionString = $"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Winterfell;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+                x.ConnectionString = $"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Winterfell;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 x.BatchSize = 100;
                 x.LogFormattedSql = true;
                 x.LogSqlInConsole = true;

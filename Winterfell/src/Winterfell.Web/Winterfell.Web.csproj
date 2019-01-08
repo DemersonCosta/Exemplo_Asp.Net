@@ -176,6 +176,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdministrativoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoriaController.cs" />
     <Compile Include="Areas\Admin\Controllers\PostagemController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsuarioController.cs" />
     <Compile Include="Infra\Controllers\BaseController.cs" />
@@ -218,7 +219,7 @@
     <Content Include="Content\Admin\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\Admin\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\Admin\font-awesome\fonts\FontAwesome.otf" />
-    <Content Include="Areas\Admin\Views\Usuario\Form_.cshtml" />
+    <Content Include="Areas\Admin\Views\Usuario\_form.cshtml" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-reboot.min.css.map" />
@@ -230,11 +231,14 @@
     <Content Include="Scripts\angular\angular.js" />
     <Content Include="Scripts\angular\angular.min.js" />
     <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\categoria\categoriaCtrl.js" />
     <Content Include="Scripts\app\filters.js" />
     <Content Include="Areas\Admin\Views\Postagem\_form.cshtml" />
+    <Content Include="Areas\Admin\Views\Categoria\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Categoria\_form.cshtml" />
     <None Include="Scripts\jquery\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\app\infra\jquery.config.js" />
-    <Content Include="Scripts\app\Postagem\postagemCtrl.js" />
+    <Content Include="Scripts\app\postagem\postagemCtrl.js" />
     <Content Include="Scripts\app\usuario\usuarioCtrl.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
@@ -398,13 +402,16 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Winterfell.Core\Winterfell.Core.csproj">
       <Project>{5cf30f11-c5ca-4803-9f70-c58d2368d858}</Project>
       <Name>Winterfell.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

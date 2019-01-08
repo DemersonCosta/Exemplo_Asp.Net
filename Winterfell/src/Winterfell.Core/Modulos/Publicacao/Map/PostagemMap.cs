@@ -19,7 +19,7 @@ namespace Winterfell.Core.Modulos.Publicacao.Map
                 m.Generator(Generators.Identity);               
             });           
 
-            Property(x => x.DataPost, m => m.Column("Publicacao"));
+            Property(x => x.DataPost, m => m.Column("DataPost"));
 
             Property(x => x.Titulo, m => m.Column("Titulo"));
 
@@ -29,13 +29,13 @@ namespace Winterfell.Core.Modulos.Publicacao.Map
 
             Property(x => x.ImagemMimeType, m => m.Column("ImagemType"));
 
-            Property(x => x.Foto, m => m.Column("Foto"));
+            //Property(x => x.Foto, m => m.Column("Foto"));
 
-            ManyToOne(x => x.Categoria, m =>
-            {
-                m.Cascade(Cascade.All);
-                m.Column("IdPostagem");
-            });
+            ManyToOne(
+                c => c.Categoria, 
+                map => map.Column("IdCategoria")
+            
+            );
 
         }
     }

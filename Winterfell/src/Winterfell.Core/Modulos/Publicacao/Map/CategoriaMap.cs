@@ -21,20 +21,26 @@ namespace Winterfell.Core.Modulos.Publicacao.Map
 
             Property(x => x.NomeCategoria, m => m.Column("NomeCategoria"));
 
-            Bag(
-               x => x.Postagem,
-               map =>
-               {
-                   map.Table("Postagem");
-                   map.Fetch(CollectionFetchMode.Select);
-                    //map.Lazy(CollectionLazy.Lazy);
-                    map.Cascade(Cascade.All);
-                    //map.Inverse(true);
-                    map.Key(k => k.Column("IdPostagem"));
 
-               },
-               r => r.OneToMany()
-           );
+            Bag(p => p.Postagem,
+                map => map.Key(k => k.Column("IdCategoria")),
+                rel => rel.OneToMany()
+                );
+
+           // Bag(
+           //    x => x.Postagem,
+           //    map =>
+           //    {
+           //        map.Table("Postagem");
+           //        map.Fetch(CollectionFetchMode.Select);
+           //         //map.Lazy(CollectionLazy.Lazy);
+           //        map.Cascade(Cascade.All);
+           //         //map.Inverse(true);
+           //         map.Key(k => k.Column("IdPostagem"));
+
+           //    },
+           //    r => r.OneToMany()
+           //);
             
         }
         

@@ -1,0 +1,20 @@
+﻿@using System.Web.Optimization
+<br />
+
+<div>
+    <button type="button" class="btn btn-primary" onclick="abrirModal()">
+        Modal
+    </button>
+    
+</div>
+
+    @Html.Partial("_form")
+
+<script type="text/javascript">
+
+
+    function abrirModal() {
+        $('#exampleModal').modal('show')
+        console.log('modal clicado')
+    }
+</script>

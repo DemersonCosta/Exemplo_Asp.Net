@@ -118,6 +118,12 @@ namespace Winterfell.Web
                 ));
 
             #endregion
+            #region Modulo Categoria
+            bundles.Add(new ScriptBundle("~/bundles/categoriaAngular").Include(
+                "~/Scripts/app/categoria/categoriaCtrl.js"
+                ));
+
+            #endregion
 
             //#region Modulo Administrativo
             //bundles.Add(new ScriptBundle("~/bundles/administrativo").Include(               
